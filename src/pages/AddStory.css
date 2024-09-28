@@ -1,0 +1,185 @@
+/* Container for the Add Story page */
+.add-story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Title styling */
+.add-story-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Form wrapper inside the story form */
+.story-form-container {
+    width: 100%;
+}
+
+/* Input fields inside the form */
+.story-form-container input,
+.story-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Textarea styling for longer inputs */
+.story-form-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button styling */
+.story-form-container button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.story-form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .add-story-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .add-story-title {
+        font-size: 2rem;
+    }
+
+    .story-form-container button {
+        font-size: 1rem;
+    }
+}
+
+/* Story form container */
+.story-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input and select field styling */
+.form-input, .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Slide container */
+.slides-container {
+    margin-top: 20px;
+}
+
+/* Single slide item */
+.slide-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Button to remove a slide */
+.remove-slide-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.remove-slide-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Button to add a slide */
+.add-slide-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-slide-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #27ae60;
+}
+

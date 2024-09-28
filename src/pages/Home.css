@@ -1,0 +1,286 @@
+/* General body styles */
+body {
+    background-color: hsl(0, 90%, 95%); /* Light gray background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Home container styling */
+  .home-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white; /* White background for the content area */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+.user-name-circle {
+    width: 100px;
+    height: 60px; 
+    border-radius: 40%; 
+    /* background-color: rgb(2, 31, 59);  */
+    object-fit: cover; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    color: hsl(325, 94%, 46%); 
+    font-weight: bold; 
+    font-size: 12px;
+    margin-right: 10px; 
+}
+
+  
+  /* Filter section */
+  .filter-category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Filter label styling */
+  .filter-category label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  /* Select dropdown styling */
+  .filter-category select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* Story card styling */
+  .story-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header section */
+  .story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Add space below the header */
+  }
+  
+  /* Author text */
+  .header-left .author {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Story title text */
+  .header-right h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+    text-align: right;
+  }
+  
+  /* Story slide container */
+  .story-slide-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Slide styling */
+  .slide {
+    position: relative;
+  }
+  
+  .slide-image {
+    width: 100%; 
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide-video {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .slide-text {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Navigation buttons for slides */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Story actions */
+  .story-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Action buttons styling */
+  .story-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .story-actions button:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  /* Like button styling */
+  .like-button.liked {
+    color: red;
+  }
+  
+  /* Bookmark button styling */
+  .bookmark-button.bookmarked {
+    color: #f4c542; /* Gold color for bookmarked state */
+  }
+  
+  /* Download button styling */
+  .download-button {
+    color: #28a745; /* Green color */
+  }
+  
+  .download-button:hover {
+    color: #218838; /* Darker green on hover */
+  }
+  
+  /* Share button styling */
+  .share-button {
+    color: #17a2b8; /* Teal color */
+  }
+  
+  .share-button:hover {
+    color: #117a8b; /* Darker teal on hover */
+  }
+  
+  /* Edit button styling */
+  .edit-button {
+    color: #ffc107; /* Amber color */
+  }
+  
+  .edit-button:hover {
+    color: #e0a800; /* Darker amber on hover */
+  }
+  
+  /* Like count styling */
+  .like-count {
+    font-size: 14px;
+    color: #555;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .story-card {
+      padding: 10px;
+    }
+  
+    .story-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-right h3 {
+      text-align: left;
+      margin-top: 10px;
+    }
+  
+    .filter-category {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-category select {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .story-slide-container {
+      max-width: 100%;
+    }
+  
+    .slide-image,
+    .slide-video {
+      height: 250px; /* Reduced height on smaller screens */
+    }
+  
+    .nav-button {
+      padding: 8px;
+      font-size: 18px;
+    }
+  
+    .story-actions button {
+      font-size: 20px;
+    }
+  }
+  

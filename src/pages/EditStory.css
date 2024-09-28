@@ -1,0 +1,120 @@
+/* EditStory.css */
+
+/* Container for the Edit Story form */
+.edit-story-container {
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 40px auto; /* Center the container horizontally with top and bottom margins */
+    padding: 30px; /* Add padding inside the container */
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the container */
+.edit-story-container:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Heading of the form */
+.edit-story-container h1 {
+    text-align: center; /* Center the heading text */
+    margin-bottom: 25px; /* Space below the heading */
+    font-size: 2em; /* Increase font size */
+    color: #333333; /* Darker text color for readability */
+}
+
+/* Error message styling */
+.error-message {
+    color: #e74c3c; /* Red color for errors */
+    background-color: #fdecea; /* Light red background */
+    border: 1px solid #f5c6cb; /* Border to define the error box */
+    padding: 10px 15px; /* Padding inside the error box */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the error message */
+    text-align: center; /* Center the error text */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Success message styling */
+.success-message {
+    color: #2ecc71; /* Green color for success */
+    background-color: #eafaf1; /* Light green background */
+    border: 1px solid #c3e6cb; /* Border to define the success box */
+    padding: 10px 15px; /* Padding inside the success box */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the success message */
+    text-align: center; /* Center the success text */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Form styling */
+.edit-story-container form {
+    display: flex;
+    flex-direction: column; /* Stack form groups vertically */
+    gap: 20px; /* Space between form groups */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+/* Label styling */
+.form-group label {
+    margin-bottom: 8px; /* Space below the label */
+    font-size: 1em; /* Standard font size */
+    color: #555555; /* Gray color for labels */
+    font-weight: 600; /* Semi-bold for labels */
+}
+
+/* Input styling */
+.form-control {
+    padding: 12px 15px; /* Padding inside the input */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 1em; /* Standard font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Input focus state */
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+
+/* Submit button styling */
+.btn-submit {
+    padding: 12px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger font */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Submit button hover state */
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .edit-story-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .edit-story-container h1 {
+        font-size: 1.5em; /* Smaller heading on mobile */
+    }
+
+    .btn-submit {
+        font-size: 1em; /* Adjust button font size */
+        padding: 10px 18px; /* Adjust button padding */
+    }
+}
