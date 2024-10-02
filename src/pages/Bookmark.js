@@ -1,6 +1,6 @@
 // src/components/Bookmark.js
 import React, { useEffect, useState } from 'react';
-import api from '../services/api'; // Import your axios instance
+import api from '../services/api'; 
 
 const Bookmark = () => {
   const [bookmarks, setBookmarks] = useState([]);
@@ -8,30 +8,30 @@ const Bookmark = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Function to fetch user's bookmark details
+    
     const fetchBookmarks = async () => {
       try {
-        const token = localStorage.getItem('authToken'); // Get the token from local storage
+        const token = localStorage.getItem('authToken'); 
         if (!token) {
           setError('User not authenticated');
           setLoading(false);
           return;
         }
 
-        // Fetch user profile to get bookmark IDs
+        
         const userResponse = await api.get('/users/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
 
-        // Log the user response to check if the structure is correct
+    
         console.log('User Response:', userResponse.data);
 
         const user = userResponse.data;
-        const bookmarkIds = user.bookmarks || []; // Ensure bookmarkIds is an array
+        const bookmarkIds = user.bookmarks || []; 
 
-        // Log the bookmark IDs to verify if they exist
+        
         console.log('Bookmark IDs:', bookmarkIds);
 
         if (bookmarkIds.length === 0) {
@@ -40,22 +40,22 @@ const Bookmark = () => {
           return;
         }
 
-        // Fetch each bookmark's details by its _id
+        
         const bookmarkDetailsPromises = bookmarkIds.map((id) =>
           api.get(`/stories/${id}`, {
             headers: {
-              Authorization: `Bearer ${token}`, // Include token for each bookmark request
+              Authorization: `Bearer ${token}`, 
             },
           })
         );
 
         const bookmarkResponses = await Promise.all(bookmarkDetailsPromises);
-        console.log('Bookmark Responses:', bookmarkResponses); // Log all bookmark responses
+        console.log('Bookmark Responses:', bookmarkResponses); 
 
         const bookmarkDetails = bookmarkResponses.map((response) => response.data);
-        console.log('Bookmark Details:', bookmarkDetails); // Log the final details
+        console.log('Bookmark Details:', bookmarkDetails); 
 
-        setBookmarks(bookmarkDetails); // Update state with the bookmark details
+        setBookmarks(bookmarkDetails); 
         setLoading(false);
       } catch (error) {
         console.error('Error fetching bookmarks:', error.response ? error.response.data : error.message);
@@ -67,12 +67,12 @@ const Bookmark = () => {
     fetchBookmarks();
   }, []);
 
-  // Display a loading state while fetching
+  
   if (loading) {
     return <p>Loading...</p>;
   }
 
-  // Display an error if there's any issue fetching the bookmarks
+  
   if (error) {
     return <p>{error}</p>;
   }

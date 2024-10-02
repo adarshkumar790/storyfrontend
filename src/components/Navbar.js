@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Navbar.css'; // Import the CSS file
+import './Navbar.css'; 
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
                     {token ? (
                         <>
                             <Link to="/add-story" className="navbar-link">Add Story</Link>
-                            {/* <Link to="/bookmark" className="navbar-link">Bookmarks</Link> */}
+                            <Link to="/bookmark" className="navbar-link">Bookmarks</Link>
                             <button onClick={handleLogout} className="navbar-button">Logout</button>
                         </>
                     ) : (

@@ -1,8 +1,9 @@
 import axios from 'axios';
 
+const backendURL = 'https://storybackend-3pn7.onrender.com'
 // Create an instance of Axios with default settings
 const api = axios.create({
-    baseURL: `https://storybackend-3pn7.onrender.com/api`, // your backend URL
+    baseURL: `${backendURL}/api`, 
     headers: {
         'Content-Type': 'application/json',
     },
